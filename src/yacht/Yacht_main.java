@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 
 class MyData{
-//	private int dice1; Áßº¹½áÀÖ´ÂÀÌÀ¯??
+//	private int dice1; ì¤‘ë³µì¨ìˆëŠ”ì´ìœ ??
 	synchronized void abc() {			
 			System.out.println("\\            \\");
 			System.out.println(" \\       -- -- -- --");
@@ -23,7 +23,7 @@ class MyData{
   synchronized void bcd() {
 			System.out.println();
 			System.out.println();
-			System.out.println("         ¤± ¤± ¤± ¤± ¤±	");
+			System.out.println("         ã… ã… ã… ã… ã…	");
 			System.out.println("         _  _  _ _     ");
 			System.out.println("        /  / / / /  ");
 			System.out.println("       /  / / / /  ");
@@ -127,14 +127,14 @@ public class Yacht_main {
 	}
 	public static void main(String[] args) {
 		
-		System.out.println("°ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù");		
+		System.out.println("ê²Œì„ì„ ì‹œì‘í•©ë‹ˆë‹¤");		
 		System.out.println("-----------");
 		
 		Scanner sc = new Scanner(System.in);
 		Random ra = new Random();
 		
 		int playerTurn=1;			
-		System.out.println("ÁÖ»çÀ§¸¦ ±¼¸®·Á¸é d¸¦ Á¦¿ÜÇÑ ¾Æ¹«Å°³ª ÀÔ·ÂÇÏ¼¼¿ä ");
+		System.out.println("ì£¼ì‚¬ìœ„ë¥¼ êµ´ë¦¬ë ¤ë©´ dë¥¼ ì œì™¸í•œ ì•„ë¬´í‚¤ë‚˜ ì…ë ¥í•˜ì„¸ìš” ");
 		
 			int dice1=0;
 			int dice2=0;
@@ -154,34 +154,34 @@ public class Yacht_main {
 			HashMap<String, Integer> hSet11 = new LinkedHashMap<String, Integer>();
 			HashMap<String, Integer> hSet22 = new LinkedHashMap<String, Integer>();
 			
-			hSet11.put("¿ø",0);
-			hSet11.put("Åõ",0);
-			hSet11.put("¾²¸®",0);
-			hSet11.put("Æ÷",0);
-			hSet11.put("ÆÄÀÌºê",0);
-			hSet11.put("½Ä½º",0);
-			hSet11.put("º¸³Ê½º", 0);
-			hSet11.put("Âù½º",0);
-			hSet11.put("Æ÷´ÙÀÌ½º",0);
-			hSet11.put("Ç®ÇÏ¿ì½º",0);
-			hSet11.put("½ºÆ®·¹ÀÌÆ®",0);
-			hSet11.put("·Î¾â ½ºÆ®·¹ÀÌÆ®",0);
-			hSet11.put("¾ßÃß",0);
-			hSet11.put("ÃÑÇÕ", 0);
-			hSet22.put("¿ø",0);
-			hSet22.put("Åõ",0);
-			hSet22.put("¾²¸®",0);
-			hSet22.put("Æ÷",0);
-			hSet22.put("ÆÄÀÌºê",0);
-			hSet22.put("½Ä½º",0);			
-			hSet22.put("º¸³Ê½º", 0);
-			hSet22.put("Âù½º",0);
-			hSet22.put("Æ÷´ÙÀÌ½º",0);
-			hSet22.put("Ç®ÇÏ¿ì½º",0);
-			hSet22.put("½ºÆ®·¹ÀÌÆ®",0);
-			hSet22.put("·Î¾â ½ºÆ®·¹ÀÌÆ®",0);
-			hSet22.put("¾ßÃß",0);
-			hSet22.put("ÃÑÇÕ", 0);
+			hSet11.put("ì›",0);
+			hSet11.put("íˆ¬",0);
+			hSet11.put("ì“°ë¦¬",0);
+			hSet11.put("í¬",0);
+			hSet11.put("íŒŒì´ë¸Œ",0);
+			hSet11.put("ì‹ìŠ¤",0);
+			hSet11.put("ë³´ë„ˆìŠ¤", 0);
+			hSet11.put("ì°¬ìŠ¤",0);
+			hSet11.put("í¬ë‹¤ì´ìŠ¤",0);
+			hSet11.put("í’€í•˜ìš°ìŠ¤",0);
+			hSet11.put("ìŠ¤íŠ¸ë ˆì´íŠ¸",0);
+			hSet11.put("ë¡œì–„ ìŠ¤íŠ¸ë ˆì´íŠ¸",0);
+			hSet11.put("ì•¼ì¶”",0);
+			hSet11.put("ì´í•©", 0);
+			hSet22.put("ì›",0);
+			hSet22.put("íˆ¬",0);
+			hSet22.put("ì“°ë¦¬",0);
+			hSet22.put("í¬",0);
+			hSet22.put("íŒŒì´ë¸Œ",0);
+			hSet22.put("ì‹ìŠ¤",0);			
+			hSet22.put("ë³´ë„ˆìŠ¤", 0);
+			hSet22.put("ì°¬ìŠ¤",0);
+			hSet22.put("í¬ë‹¤ì´ìŠ¤",0);
+			hSet22.put("í’€í•˜ìš°ìŠ¤",0);
+			hSet22.put("ìŠ¤íŠ¸ë ˆì´íŠ¸",0);
+			hSet22.put("ë¡œì–„ ìŠ¤íŠ¸ë ˆì´íŠ¸",0);
+			hSet22.put("ì•¼ì¶”",0);
+			hSet22.put("ì´í•©", 0);
 			
 			int []arr = new int[6];
 			
@@ -201,13 +201,13 @@ public class Yacht_main {
 			while(true) {			
 				String roll = sc.next();				
 				if(roll.equals("d")) {
-					System.out.println("ÅÏÀ» Á¾·áÇÕ´Ï´Ù");
+					System.out.println("í„´ì„ ì¢…ë£Œí•©ë‹ˆë‹¤");
 					count=0;
 					break;
 				}
 				
-				System.out.println("´Ù½Ã ±¼¸± ÁÖ»çÀ§¸¦ ¼±ÅÃÇÏ¼¼¿ä. Ã¹ ¹øÂ° ÅÏÀÏ °æ¿ì ¶Ç´Â ÀüÃ¼¸¦ ´Ù½Ã ±¼¸± °æ¿ì 6À» ÀÔ·ÂÇÏ¼¼¿ä. ");
-				System.out.println("ÁÖ»çÀ§¸¦ ¼±ÅÃÇÏ¿´À¸¸é 0À» ´©¸£¼¼¿ä");
+				System.out.println("ë‹¤ì‹œ êµ´ë¦´ ì£¼ì‚¬ìœ„ë¥¼ ì„ íƒí•˜ì„¸ìš”. ì²« ë²ˆì§¸ í„´ì¼ ê²½ìš° ë˜ëŠ” ì „ì²´ë¥¼ ë‹¤ì‹œ êµ´ë¦´ ê²½ìš° 6ì„ ì…ë ¥í•˜ì„¸ìš”. ");
+				System.out.println("ì£¼ì‚¬ìœ„ë¥¼ ì„ íƒí•˜ì˜€ìœ¼ë©´ 0ì„ ëˆ„ë¥´ì„¸ìš”");
 
 				for (int k =0; ; k++) {
 					
@@ -312,6 +312,17 @@ public class Yacht_main {
 						d(dice3);
 						d(dice4);
 						d(dice5);
+						if(one==4||two==4||three==4||four==4||five==4||six==4) {
+							System.out.println("í¬ë‹¤ì´ìŠ¤ê°€ ë–´ìŠµë‹ˆë‹¤!!");
+						}else if((one==3||two==3||three==3||four==3||five==3||six==3)&&(one==2||two==2||three==2||four==2||five==2||six==2)) {
+							System.out.println("í’€í•˜ìš°ìŠ¤ê°€ ë–´ìŠµë‹ˆë‹¤!!");
+						}else if((three>=1&&four>=1&&one>=1&&two>=1)|(two>=1&&three>=1&&four>=1&&five>=1)|(three>=1&&four>=1&&five>=1&&six>=1)) {
+							System.out.println("ìŠ¤íŠ¸ë ˆì´íŠ¸ê°€ ë–´ìŠµë‹ˆë‹¤!!");
+						}else if((one==1&two==1&three==1&four==1&five==1)||(two==1&three==1&four==1&five==1&six==1)) {
+							System.out.println("ë¡œì–„ ìŠ¤íŠ¸ë ˆì´íŠ¸ê°€ ë–´ìŠµë‹ˆë‹¤!!");
+						}else if(one==5|two==5|three==5|four==5|five==5|six==5){
+							System.out.println("ì•¼ì¶”ê°€ ë–´ìŠµë‹ˆë‹¤!!");
+						}
 						h.replace("one",one);
 						h.replace("two",two);
 						h.replace("three",three);
@@ -322,108 +333,108 @@ public class Yacht_main {
 						count ++;
 						
 						if (count == 3) {
-							System.out.println("3¹øÀÇ ±âÈ¸°¡ ³¡³µ½À´Ï´Ù");
+							System.out.println("3ë²ˆì˜ ê¸°íšŒê°€ ëë‚¬ìŠµë‹ˆë‹¤");
 							count=0;
 							break;
 						}					
 					}
 			System.out.println();
-			System.out.println(3-count+"¹øÀÇ ±âÈ¸°¡ ´õ ³²¾Ò½À´Ï´Ù. ÅÏÀ» Á¾·áÇÏ½Ã·Á¸é dÅ°¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println(3-count+"ë²ˆì˜ ê¸°íšŒê°€ ë” ë‚¨ì•˜ìŠµë‹ˆë‹¤. í„´ì„ ì¢…ë£Œí•˜ì‹œë ¤ë©´ dí‚¤ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		}
 			
 			Turn t = new Turn(h.get("one"),h.get("two"),h.get("three"),h.get("four"),h.get("five"),h.get("six"));
 									
-			System.out.println("¿É¼ÇÀ» ¼±ÅÃÇÏ¼¼¿ä.");
+			System.out.println("ì˜µì…˜ì„ ì„ íƒí•˜ì„¸ìš”.");
 			System.out.println();
-			System.out.println("1.¿ø 2.Åõ 3.¾²¸® 4.Æ÷ 5.ÆÄÀÌºê 6.½Ä½º 7.Âù½º 8.Æ÷´ÙÀÌ½º 9.Ç®ÇÏ¿ì½º 10.½ºÆ®·¹ÀÌÆ® 11.·Î¾â ½ºÆ®·¹ÀÌÆ® 12.¾ßÃß");
+			System.out.println("1.ì› 2.íˆ¬ 3.ì“°ë¦¬ 4.í¬ 5.íŒŒì´ë¸Œ 6.ì‹ìŠ¤ 7.ì°¬ìŠ¤ 8.í¬ë‹¤ì´ìŠ¤ 9.í’€í•˜ìš°ìŠ¤ 10.ìŠ¤íŠ¸ë ˆì´íŠ¸ 11.ë¡œì–„ ìŠ¤íŠ¸ë ˆì´íŠ¸ 12.ì•¼ì¶”");
 			
 			int op = sc.nextInt();			
 			
 			if(op==1) {
 				System.out.println(t.getone(one));
-				if (playerTurn%2==1) {hSet11.put("¿ø", t.getone(one));}
-				else {hSet22.put("¿ø", t.getone(one));} 
+				if (playerTurn%2==1) {hSet11.put("ì›", t.getone(one));}
+				else {hSet22.put("ì›", t.getone(one));} 
 			}
 			
 			else if(op==2) {
 				System.out.println(t.gettwo(two)); 			
-				if (playerTurn%2==1) {hSet11.put("Åõ", t.gettwo(two));}
-				else {hSet22.put("Åõ", t.gettwo(two));}
+				if (playerTurn%2==1) {hSet11.put("íˆ¬", t.gettwo(two));}
+				else {hSet22.put("íˆ¬", t.gettwo(two));}
 			}
 				
 			else if(op==3) {
 				System.out.println(t.getthree(three)); 
-				if (playerTurn%2==1) {hSet11.put("¾²¸®", t.getthree(three));}
-				else {hSet22.put("¾²¸®", t.getthree(three));}
+				if (playerTurn%2==1) {hSet11.put("ì“°ë¦¬", t.getthree(three));}
+				else {hSet22.put("ì“°ë¦¬", t.getthree(three));}
 				}
 			
 			else if(op==4) {
 				System.out.println(t.getfour(four)); 
-				if (playerTurn%2==1) {hSet11.put("Æ÷", t.getfour(four));}
-				else {hSet22.put("Æ÷", t.getfour(four));}
+				if (playerTurn%2==1) {hSet11.put("í¬", t.getfour(four));}
+				else {hSet22.put("í¬", t.getfour(four));}
 				}
 			
 			else if(op==5) {
 				System.out.println(t.getfive(five));
-				if (playerTurn%2==1) {hSet11.put("ÆÄÀÌºê", t.getfive(five));}
-				else {hSet22.put("ÆÄÀÌºê", t.getfive(five));}
+				if (playerTurn%2==1) {hSet11.put("íŒŒì´ë¸Œ", t.getfive(five));}
+				else {hSet22.put("íŒŒì´ë¸Œ", t.getfive(five));}
 				}
 			else if(op==6) {
 				System.out.println(t.getsix(six)); 
-				if (playerTurn%2==1) {hSet11.put("½Ä½º", t.getsix(six));}
-				else {hSet22.put("½Ä½º", t.getsix(six));}
+				if (playerTurn%2==1) {hSet11.put("ì‹ìŠ¤", t.getsix(six));}
+				else {hSet22.put("ì‹ìŠ¤", t.getsix(six));}
 				}
 			else if(op==7) {
 				System.out.println(t.getchance(one,two,three,four,five,six));
-				if (playerTurn%2==1) {hSet11.put("Âù½º", t.getchance(one,two,three,four,five,six));}
-				else {hSet22.put("Âù½º", t.getchance(one,two,three,four,five,six));}
+				if (playerTurn%2==1) {hSet11.put("ì°¬ìŠ¤", t.getchance(one,two,three,four,five,six));}
+				else {hSet22.put("ì°¬ìŠ¤", t.getchance(one,two,three,four,five,six));}
 				}
 			else if(op==8) {				
 				System.out.println(t.getfd(one, two, three, four, five, six));
-				if (playerTurn%2==1) {hSet11.put("Æ÷´ÙÀÌ½º", t.getfd(one, two, three, four, five, six));}
-				else {hSet22.put("Æ÷´ÙÀÌ½º", t.getfd(one, two, three, four, five, six));}
+				if (playerTurn%2==1) {hSet11.put("í¬ë‹¤ì´ìŠ¤", t.getfd(one, two, three, four, five, six));}
+				else {hSet22.put("í¬ë‹¤ì´ìŠ¤", t.getfd(one, two, three, four, five, six));}
 				}
 			else if(op==9) {
 				System.out.println(t.getfh(one, two, three, four, five, six));
-				if (playerTurn%2==1) {hSet11.put("Ç®ÇÏ¿ì½º", t.getfh(one, two, three, four, five, six));}
-				else {hSet22.put("Ç®ÇÏ¿ì½º", t.getfh(one, two, three, four, five, six));}
+				if (playerTurn%2==1) {hSet11.put("í’€í•˜ìš°ìŠ¤", t.getfh(one, two, three, four, five, six));}
+				else {hSet22.put("í’€í•˜ìš°ìŠ¤", t.getfh(one, two, three, four, five, six));}
 				}
 			else if(op==10) {
 				System.out.println(t.getst(one, two, three, four, five, six));
-				if (playerTurn%2==1) {hSet11.put("½ºÆ®·¹ÀÌÆ®", t.getst(one, two, three, four, five, six));}
-				else {hSet22.put("½ºÆ®·¹ÀÌÆ®", t.getst(one, two, three, four, five, six));}
+				if (playerTurn%2==1) {hSet11.put("ìŠ¤íŠ¸ë ˆì´íŠ¸", t.getst(one, two, three, four, five, six));}
+				else {hSet22.put("ìŠ¤íŠ¸ë ˆì´íŠ¸", t.getst(one, two, three, four, five, six));}
 				}
 			else if(op==11) {
 				System.out.println(t.getls(one, two, three, four, five, six));
-				if (playerTurn%2==1) {hSet11.put("·Î¾â ½ºÆ®·¹ÀÌÆ®", t.getls(one, two, three, four, five, six));}
-				else {hSet22.put("·Î¾â ½ºÆ®·¹ÀÌÆ®", t.getls(one, two, three, four, five, six));}
+				if (playerTurn%2==1) {hSet11.put("ë¡œì–„ ìŠ¤íŠ¸ë ˆì´íŠ¸", t.getls(one, two, three, four, five, six));}
+				else {hSet22.put("ë¡œì–„ ìŠ¤íŠ¸ë ˆì´íŠ¸", t.getls(one, two, three, four, five, six));}
 				}
 			else if(op==12) {
 				System.out.println(t.getyacht(one, two, three, four, five, six));
-				if (playerTurn%2==1) {hSet11.put("¾ßÃß", t.getyacht(one, two, three, four, five, six));}
-				else {hSet22.put("¾ßÃß", t.getyacht(one, two, three, four, five, six));}
+				if (playerTurn%2==1) {hSet11.put("ì•¼ì¶”", t.getyacht(one, two, three, four, five, six));}
+				else {hSet22.put("ì•¼ì¶”", t.getyacht(one, two, three, four, five, six));}
 				}			
 									
-				int bs1 = hSet11.get("¿ø"); 
-				int bs2 = hSet11.get("Åõ");
-				int bs3 = hSet11.get("¾²¸®");
-				int	bs4 = hSet11.get("Æ÷");
-				int	bs5 = hSet11.get("ÆÄÀÌºê");
-				int	bs6 = hSet11.get("½Ä½º");
+				int bs1 = hSet11.get("ì›"); 
+				int bs2 = hSet11.get("íˆ¬");
+				int bs3 = hSet11.get("ì“°ë¦¬");
+				int	bs4 = hSet11.get("í¬");
+				int	bs5 = hSet11.get("íŒŒì´ë¸Œ");
+				int	bs6 = hSet11.get("ì‹ìŠ¤");
 			
 		if(bs1+bs2+bs3+bs4+bs5+bs6 >= 63) { 
-			hSet11.put("º¸³Ê½º", 35);
+			hSet11.put("ë³´ë„ˆìŠ¤", 35);
 		}
 			
-				int bs21 = hSet22.get("¿ø"); 
-				int bs22 = hSet22.get("Åõ");
-				int bs23 = hSet22.get("¾²¸®");
-				int	bs24 = hSet22.get("Æ÷");
-				int	bs25 = hSet22.get("ÆÄÀÌºê");
-				int	bs26 = hSet22.get("½Ä½º");			
+				int bs21 = hSet22.get("ì›"); 
+				int bs22 = hSet22.get("íˆ¬");
+				int bs23 = hSet22.get("ì“°ë¦¬");
+				int	bs24 = hSet22.get("í¬");
+				int	bs25 = hSet22.get("íŒŒì´ë¸Œ");
+				int	bs26 = hSet22.get("ì‹ìŠ¤");			
 	
 		if(bs21+bs22+bs23+bs24+bs25+bs26 >= 63) { 
-			hSet22.put("º¸³Ê½º", 35);
+			hSet22.put("ë³´ë„ˆìŠ¤", 35);
 			}
 			sum1=0;
 			sum2=0;		
@@ -436,9 +447,9 @@ public class Yacht_main {
 					Integer value = hSet11.get(key);
 					sum1=sum1+value;					
 				}
-				sum1=sum1-hSet11.get("ÃÑÇÕ");	
-				hSet11.put("ÃÑÇÕ", sum1);
-				System.out.println("ÇÃ·¹ÀÌ¾î1 Á¡¼ö :"+ hSet11 );
+				sum1=sum1-hSet11.get("ì´í•©");	
+				hSet11.put("ì´í•©", sum1);
+				System.out.println("í”Œë ˆì´ì–´1 ì ìˆ˜ :"+ hSet11 );
 			}
 		
 			else{
@@ -450,9 +461,9 @@ public class Yacht_main {
 					sum2=sum2+value;					
 				}
 				
-				sum2=sum2-hSet22.get("ÃÑÇÕ");	
-				hSet22.put("ÃÑÇÕ", sum2);
-				System.out.println("ÇÃ·¹ÀÌ¾î2 Á¡¼ö :"+ hSet22 );
+				sum2=sum2-hSet22.get("ì´í•©");	
+				hSet22.put("ì´í•©", sum2);
+				System.out.println("í”Œë ˆì´ì–´2 ì ìˆ˜ :"+ hSet22 );
 			}
 									
 				
@@ -463,20 +474,20 @@ public class Yacht_main {
 			
 			if(playerTurn==25) { 
 				
-				if(hSet11.get("ÃÑÇÕ")>hSet22.get("ÃÑÇÕ")) {
-					System.out.println("ÇÃ·¹ÀÌ¾î1°¡ ÀÌ°å½À´Ï´Ù");
+				if(hSet11.get("ì´í•©")>hSet22.get("ì´í•©")) {
+					System.out.println("í”Œë ˆì´ì–´1ê°€ ì´ê²¼ìŠµë‹ˆë‹¤");
 				}
-				else if(hSet11.get("ÃÑÇÕ")==hSet22.get("ÃÑÇÕ")) {
-					System.out.println("ºñ°å½À´Ï´Ù");
+				else if(hSet11.get("ì´í•©")==hSet22.get("ì´í•©")) {
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤");
 				}
 				else {
-					System.out.println("ÇÃ·¹ÀÌ¾î2°¡ ÀÌ°å½À´Ï´Ù");
+					System.out.println("í”Œë ˆì´ì–´2ê°€ ì´ê²¼ìŠµë‹ˆë‹¤");
 				}
 				
-				System.out.println("°ÔÀÓ Á¾·á");
+				System.out.println("ê²Œì„ ì¢…ë£Œ");
 				break;
 			}
-			System.out.println("´ÙÀ½ »ó´ë Â÷·ÊÀÔ´Ï´Ù. ÁÖ»çÀ§¸¦ ´øÁö¼¼¿ä ");		
+			System.out.println("ë‹¤ìŒ ìƒëŒ€ ì°¨ë¡€ì…ë‹ˆë‹¤. ì£¼ì‚¬ìœ„ë¥¼ ë˜ì§€ì„¸ìš” ");		
 		}			
 }
 	public static void d(int dice) {

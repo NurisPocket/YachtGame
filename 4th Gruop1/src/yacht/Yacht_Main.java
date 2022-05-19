@@ -7,7 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Map;
-
+aaa
 class MyData {
 	 private int dice1;
 	synchronized void abc() {

@@ -7,9 +7,10 @@ import java.util.LinkedHashMap;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Map;
-aaa
+
 class MyData {
-	 private int dice1;
+	private int dice1;
+
 	synchronized void abc() {
 		System.out.println("\\            \\");
 		System.out.println(" \\       -- -- -- --");
@@ -231,40 +232,36 @@ public class Yacht_Main {
 					System.out.println("다시 굴릴 주사위를 선택하세요. 첫 번째 턴일 경우 또는 전체를 다시 굴릴 경우 6을 입력하세요. ");
 					System.out.println("주사위를 선택하였으면 0을 누르세요");
 
-					try {for (int k =0; ; k++) {
-						
-						int fix = sc.nextInt();
-							if(fix == 6) {
-								 dice1 = ra.nextInt(6)+1;
-								 dice2 = ra.nextInt(6)+1;
-								 dice3 = ra.nextInt(6)+1;
-								 dice4 = ra.nextInt(6)+1;
-								 dice5 = ra.nextInt(6)+1;
+					try {
+						for (int k = 0;; k++) {
+
+							int fix = sc.nextInt();
+							if (fix == 6) {
+								dice1 = ra.nextInt(6) + 1;
+								dice2 = ra.nextInt(6) + 1;
+								dice3 = ra.nextInt(6) + 1;
+								dice4 = ra.nextInt(6) + 1;
+								dice5 = ra.nextInt(6) + 1;
 							}
-							if(fix==1) {
-								 dice1 = ra.nextInt(6)+1;
-							}
-							else if(fix == 2) {
-								 dice2 = ra.nextInt(6)+1;
-							}
-							else if(fix == 3) {
-								 dice3 = ra.nextInt(6)+1;
-							}
-							else if(fix == 4) {
-								 dice4 = ra.nextInt(6)+1;
-							}
-							else if(fix == 5) {
-								 dice5 = ra.nextInt(6)+1;
-							}
-							else if(fix ==0) {
+							if (fix == 1) {
+								dice1 = ra.nextInt(6) + 1;
+							} else if (fix == 2) {
+								dice2 = ra.nextInt(6) + 1;
+							} else if (fix == 3) {
+								dice3 = ra.nextInt(6) + 1;
+							} else if (fix == 4) {
+								dice4 = ra.nextInt(6) + 1;
+							} else if (fix == 5) {
+								dice5 = ra.nextInt(6) + 1;
+							} else if (fix == 0) {
 								break;
-								}
-							
-								}					
-						}catch(InputMismatchException e) {
-							System.out.println("다시입력해 주세요");
-							continue;
+							}
+
 						}
+					} catch (InputMismatchException e) {
+						System.out.println("다시입력해 주세요");
+						continue;
+					}
 
 					arr[0] = dice1;
 					arr[1] = dice2;
@@ -373,145 +370,151 @@ public class Yacht_Main {
 				System.out.println();
 				System.out.println("1.원 2.투 3.쓰리 4.포 5.파이브 6.식스 7.찬스 8.포다이스 9.풀하우스 10.스트레이트 11.로얄 스트레이트 12.야추");
 
-				int op = sc.nextInt();
+				while (true) {
+					int op = sc.nextInt();
+					switch (op) {
+					case 1:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("원")) {
+							hSet11.put("원", t.getone(one));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("원")) {
+							hSet22.put("원", t.getone(one));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 2:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("투")) {
+							hSet11.put("투", t.gettwo(two));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("투")) {
+							hSet22.put("투", t.gettwo(two));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 3:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("쓰리")) {
+							hSet11.put("쓰리", t.getthree(three));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("쓰리")) {
+							hSet22.put("쓰리", t.getthree(three));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 4:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("포")) {
+							hSet11.put("포", t.getfour(four));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("포")) {
+							hSet22.put("포", t.getfour(four));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 5:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("파이브")) {
+							hSet11.put("파이브", t.getfive(five));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("파이브")) {
+							hSet22.put("파이브", t.getfive(five));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 6:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("식스")) {
+							hSet11.put("식스", t.getsix(six));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("식스")) {
+							hSet22.put("식스", t.getsix(six));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 7:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("찬스")) {
+							hSet11.put("찬스", t.getchance(one, two, three, four, five, six));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("찬스")) {
+							hSet22.put("찬스", t.getchance(one, two, three, four, five, six));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 8:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("포다이스")) {
+							hSet11.put("포다이스", t.getfd(one, two, three, four, five, six));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("포다이스")) {
+							hSet22.put("포다이스", t.getfd(one, two, three, four, five, six));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 9:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("풀하우스")) {
+							hSet11.put("풀하우스", t.getfh(one, two, three, four, five, six));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("풀하우스")) {
+							hSet22.put("풀하우스", t.getfh(one, two, three, four, five, six));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 10:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("스트레이트")) {
+							hSet11.put("스트레이트", t.getst(one, two, three, four, five, six));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("스트레이트")) {
+							hSet22.put("스트레이트", t.getst(one, two, three, four, five, six));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 11:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("로얄 스트레이트")) {
+							hSet11.put("로얄 스트레이트", t.getls(one, two, three, four, five, six));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("로얄 스트레이트")) {
+							hSet22.put("로얄 스트레이트", t.getls(one, two, three, four, five, six));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					case 12:
+						if (playerTurn % 2 == 1 && 0 == hSet11.get("야추")) {
+							hSet11.put("야추", t.getyacht(one, two, three, four, five, six));
+							break;
+						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("야추")) {
+							hSet22.put("야추", t.getyacht(one, two, three, four, five, six));
+							break;
+						} else {
+							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
+							continue;
+						}
+					default:
+						System.out.println("번호를 정확히 입력해주세요.");
+					}
+					if (op > 12) {
+						continue;
+					}
 
-				switch (op) {
-				case 1:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("원")) {
-						hSet11.put("원", t.getone(one));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("원")) {
-						hSet22.put("원", t.getone(one));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 2:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("투")) {
-						hSet11.put("투", t.gettwo(two));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("투")) {
-						hSet22.put("투", t.gettwo(two));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 3:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("쓰리")) {
-						hSet11.put("쓰리", t.getthree(three));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("쓰리")) {
-						hSet22.put("쓰리", t.getthree(three));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 4:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("포")) {
-						hSet11.put("포", t.getfour(four));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("포")) {
-						hSet22.put("포", t.getfour(four));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 5:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("파이브")) {
-						hSet11.put("파이브", t.getfive(five));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("파이브")) {
-						hSet22.put("파이브", t.getfive(five));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 6:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("식스")) {
-						hSet11.put("식스", t.getsix(six));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("식스")) {
-						hSet22.put("식스", t.getsix(six));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 7:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("찬스")) {
-						hSet11.put("찬스", t.getchance(one, two, three, four, five, six));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("찬스")) {
-						hSet22.put("찬스", t.getchance(one, two, three, four, five, six));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 8:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("포다이스")) {
-						hSet11.put("포다이스", t.getfd(one, two, three, four, five, six));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("포다이스")) {
-						hSet22.put("포다이스", t.getfd(one, two, three, four, five, six));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 9:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("풀하우스")) {
-						hSet11.put("풀하우스", t.getfh(one, two, three, four, five, six));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("풀하우스")) {
-						hSet22.put("풀하우스", t.getfh(one, two, three, four, five, six));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 10:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("스트레이트")) {
-						hSet11.put("스트레이트", t.getst(one, two, three, four, five, six));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("스트레이트")) {
-						hSet22.put("스트레이트", t.getst(one, two, three, four, five, six));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 11:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("로얄 스트레이트")) {
-						hSet11.put("로얄 스트레이트", t.getls(one, two, three, four, five, six));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("로얄 스트레이트")) {
-						hSet22.put("로얄 스트레이트", t.getls(one, two, three, four, five, six));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				case 12:
-					if (playerTurn % 2 == 1 && 0 == hSet11.get("야추")) {
-						hSet11.put("야추", t.getyacht(one, two, three, four, five, six));
-						break;
-					} else if (playerTurn % 2 == 0 && 0 == hSet22.get("야추")) {
-						hSet22.put("야추", t.getyacht(one, two, three, four, five, six));
-						break;
-					} else {
-						System.out.println("이미 점수를 추가하셨습니다. 패널티로 0점이 추가됩니다." + System.lineSeparator() + "0");
-						break;
-					}
-				default:
-					System.out.println("숫자를 정확히 입력해주세요.");
-					continue;
+					break;
 				}
+
 				int bs1 = hSet11.get("원");
 				int bs2 = hSet11.get("투");
 				int bs3 = hSet11.get("쓰리");
@@ -627,4 +630,4 @@ public class Yacht_Main {
 			System.out.println(" ------- ");
 		}
 	}
-} 
+}

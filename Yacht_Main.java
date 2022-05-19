@@ -231,30 +231,40 @@ public class Yacht_Main {
 					System.out.println("다시 굴릴 주사위를 선택하세요. 첫 번째 턴일 경우 또는 전체를 다시 굴릴 경우 6을 입력하세요. ");
 					System.out.println("주사위를 선택하였으면 0을 누르세요");
 
-					for (int k = 0;; k++) {
-
+					try {for (int k =0; ; k++) {
+						
 						int fix = sc.nextInt();
-						if (fix == 6) {
-							dice1 = ra.nextInt(6) + 1;
-							dice2 = ra.nextInt(6) + 1;
-							dice3 = ra.nextInt(6) + 1;
-							dice4 = ra.nextInt(6) + 1;
-							dice5 = ra.nextInt(6) + 1;
+							if(fix == 6) {
+								 dice1 = ra.nextInt(6)+1;
+								 dice2 = ra.nextInt(6)+1;
+								 dice3 = ra.nextInt(6)+1;
+								 dice4 = ra.nextInt(6)+1;
+								 dice5 = ra.nextInt(6)+1;
+							}
+							if(fix==1) {
+								 dice1 = ra.nextInt(6)+1;
+							}
+							else if(fix == 2) {
+								 dice2 = ra.nextInt(6)+1;
+							}
+							else if(fix == 3) {
+								 dice3 = ra.nextInt(6)+1;
+							}
+							else if(fix == 4) {
+								 dice4 = ra.nextInt(6)+1;
+							}
+							else if(fix == 5) {
+								 dice5 = ra.nextInt(6)+1;
+							}
+							else if(fix ==0) {
+								break;
+								}
+							
+								}					
+						}catch(InputMismatchException e) {
+							System.out.println("다시입력해 주세요");
+							continue;
 						}
-						if (fix == 1) {
-							dice1 = ra.nextInt(6) + 1;
-						} else if (fix == 2) {
-							dice2 = ra.nextInt(6) + 1;
-						} else if (fix == 3) {
-							dice3 = ra.nextInt(6) + 1;
-						} else if (fix == 4) {
-							dice4 = ra.nextInt(6) + 1;
-						} else if (fix == 5) {
-							dice5 = ra.nextInt(6) + 1;
-						} else if (fix == 0) {
-							break;
-						}
-					}
 
 					arr[0] = dice1;
 					arr[1] = dice2;
@@ -617,4 +627,4 @@ public class Yacht_Main {
 			System.out.println(" ------- ");
 		}
 	}
-}
+} 

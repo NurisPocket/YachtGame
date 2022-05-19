@@ -302,31 +302,54 @@ public class X{
 
 			int sum2=0;
 
-			int onecount=0;
+			int onecount1=0;
 
-			int twocount=0;
+			int twocount1=0;
 			
-			int threecount=0;
+			int threecount1=0;
 			
-			int fourcount=0;
+			int fourcount1=0;
 			
-			int fivecount=0;
+			int fivecount1=0;
 			
-			int sixcount=0;
+			int sixcount1=0;
 			
-			int chancecount=0;
+			int chancecount1=0;
 			
-			int fdcount=0;
+			int fdcount1=0;
 			
-			int fhcount=0;
+			int fhcount1=0;
 			
-			int stcount=0;
+			int stcount1=0;
 			
-			int lscount=0;
+			int lscount1=0;
 			
-			int yacount=0;
+			int yacount1=0;
 
+			int onecount2=0;
+
+			int twocount2=0;
 			
+			int threecount2=0;
+			
+			int fourcount2=0;
+			
+			int fivecount2=0;
+			
+			int sixcount2=0;
+			
+			int chancecount2=0;
+			
+			int fdcount2=0;
+			
+			int fhcount2=0;
+			
+			int stcount2=0;
+			
+			int lscount2=0;
+			
+			int yacount2=0;
+
 
 			
 
@@ -742,23 +765,23 @@ public class X{
 			if(op==1) {
 							
 					if (playerTurn%2==1) {
-						if(onecount==0) {
+						if(onecount1==0) {
 							hSet11.put("원", t.getone(one));
-							onecount++;
+							onecount1++;
 							break;
 						}
-						else if(onecount==1) {
+						else if(onecount1==1) {
 												}
 						System.out.println("이미 저장된 값입니다");
 						continue;
 						}
 					else {
-						if(onecount==1) {
+						if(onecount2==0) {
 						hSet22.put("원", t.getone(one));
-						onecount++;
+						onecount2++;
 						break;
 						}
-						else if(onecount==2) {
+						else if(onecount2==1) {
 					
 						}
 						System.out.println("이미 저장된 값입니다");
@@ -772,24 +795,24 @@ public class X{
 				
 				
 				if (playerTurn%2==1) {
-					if(twocount==0) {
+					if(twocount1==0) {
 						hSet11.put("투", t.gettwo(two));
-						twocount++;
+						twocount1++;
 						break;
 					}
-					else if(twocount==1) {
+					else if(twocount1==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(twocount==1) {
+					if(twocount2==0) {
 					hSet22.put("투", t.gettwo(two));
-					twocount++;
+					twocount2++;
 					break;
 					}
-					else if(twocount==2) {
+					else if(twocount2==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -803,24 +826,24 @@ public class X{
 			if(op==3) {
 
 				if (playerTurn%2==1) {
-					if(threecount==0) {
+					if(threecount1==0) {
 						hSet11.put("쓰리", t.getthree(three));
-						threecount++;
+						threecount1++;
 						break;
 					}
-					else if(threecount==1) {
+					else if(threecount1==1) {
 						
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(threecount==1) {
+					if(threecount2==0) {
 					hSet22.put("쓰리", t.getthree(three));
-					threecount++;
+					threecount2++;
 					break;
 					}
-					else if(threecount==2) {
+					else if(threecount2==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -834,24 +857,24 @@ public class X{
 			if(op==4) {
 
 				if (playerTurn%2==1) {
-					if(fourcount==0) {
+					if(fourcount1==0) {
 						hSet11.put("포", t.getfour(four));
-						fourcount++;
+						fourcount1++;
 						break;
 					}
-					else if(fourcount==1) {
+					else if(fourcount1==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(fourcount==1) {
+					if(fourcount2==0) {
 					hSet22.put("포", t.getfour(four));
-					fourcount++;
+					fourcount2++;
 					break;
 					}
-					else if(fourcount==2) {
+					else if(fourcount2==0) {
 						
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -863,24 +886,24 @@ public class X{
 			if(op==5) {
 
 				if (playerTurn%2==1) {
-					if(fivecount==0) {
+					if(fivecount1==0) {
 						hSet11.put("파이브", t.getfive(five));
-						fivecount++;
+						fivecount1++;
 						break;
 					}
-					else if(fivecount==1) {
+					else if(fivecount1==1) {
 						
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(fivecount==1) {
+					if(fivecount2==0) {
 					hSet22.put("파이브", t.getfive(five));
-					fivecount++;
+					fivecount2++;
 					break;
 					}
-					else if(fivecount==2) {
+					else if(fivecount2==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -892,24 +915,24 @@ public class X{
 			if(op==6) {
 
 				if (playerTurn%2==1) {
-					if(sixcount==0) {
+					if(sixcount1==0) {
 						hSet11.put("식스", t.getsix(six));
-						sixcount++;
+						sixcount1++;
 						break;
 					}
-					else if(sixcount==1) {
+					else if(sixcount1==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(sixcount==1) {
+					if(sixcount2==0) {
 					hSet22.put("식스", t.getsix(six));
-					sixcount++;
+					sixcount2++;
 					break;
 					}
-					else if(sixcount==2) {
+					else if(sixcount2==1) {
 						
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -921,12 +944,12 @@ public class X{
 			if(op==7) {
 
 				if (playerTurn%2==1) {
-					if(chancecount==0) {
+					if(chancecount1==0) {
 						hSet11.put("찬스", t.getchance(one, two, three, four, five, six));
-						chancecount++;
+						chancecount1++;
 						break;
 					}
-					else if(chancecount==1) {
+					else if(chancecount1==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -934,12 +957,12 @@ public class X{
 					
 					}
 				else {
-					if(chancecount==1) {
+					if(chancecount2==0) {
 					hSet22.put("찬스", t.getchance(one, two, three, four, five, six));
-					chancecount++;
+					chancecount2++;
 					break;
 					}
-					else if(chancecount==2) {
+					else if(chancecount2==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -951,24 +974,24 @@ public class X{
 
 			if(op==8) {
 				if (playerTurn%2==1) {
-					if(fdcount==0) {
+					if(fdcount1==0) {
 						hSet11.put("포다이스", t.getfd(one, two, three, four, five, six));
-						fdcount++;
+						fdcount1++;
 						break;
 					}
-					else if(fdcount==1) {
+					else if(fdcount1==1) {
 						
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(fdcount==1) {
+					if(fdcount2==0) {
 					hSet22.put("포다이스", t.getfd(one, two, three, four, five, six));
-					fdcount++;
+					fdcount2++;
 					break;
 					}
-					else if(fdcount==2) {
+					else if(fdcount2==1) {
 						
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -979,24 +1002,24 @@ public class X{
 			if(op==9) { 
 
 				if (playerTurn%2==1) {
-					if(fhcount==0) {
+					if(fhcount1==0) {
 						hSet11.put("풀하우스", t.getfh(one, two, three, four, five, six));
-						fhcount++;
+						fhcount1++;
 						break;
 					}
-					else if(fhcount==1) {
+					else if(fhcount1==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(fhcount==1) {
+					if(fhcount2==0) {
 					hSet22.put("풀하우스", t.getfh(one, two, three, four, five, six));
-					fhcount++;
+					fhcount2++;
 					break;
 					}
-					else if(fhcount==2) {
+					else if(fhcount2==1) {
 					
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -1008,24 +1031,24 @@ public class X{
 
 			if(op==10) {
 				if (playerTurn%2==1) {
-					if(stcount==0) {
+					if(stcount1==0) {
 						hSet11.put("스트레이트", t.getst(one, two, three, four, five, six));
-						stcount++;
+						stcount1++;
 						break;
 					}
-					else if(stcount==1) {
+					else if(stcount1==1) {
 				
 					}
 						System.out.println("이미 저장된 값입니다");
 						continue;
 					}
 				else {
-					if(stcount==1) {
+					if(stcount2==0) {
 					hSet22.put("스트레이트", t.getst(one, two, three, four, five, six));
-					stcount++;
+					stcount2++;
 					break;
 					}
-					else if(stcount==2) {
+					else if(stcount2==1) {
 			
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -1038,24 +1061,24 @@ public class X{
 			if(op==11) {
 
 				if (playerTurn%2==1) {
-					if(lscount==0) {
+					if(lscount1==0) {
 						hSet11.put("로얄 스트레이트", t.getls(one, two, three, four, five, six));
-						lscount++;
+						lscount1++;
 						break;
 					}
-					else if(lscount==1) {
+					else if(lscount1==1) {
 	
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(lscount==1) {
+					if(lscount2==0) {
 					hSet22.put("로얄 스트레이트", t.getls(one, two, three, four, five, six));
-					lscount++;
+					lscount2++;
 					break;
 					}
-					else if(lscount==2) {
+					else if(lscount2==1) {
 			
 					}
 					System.out.println("이미 저장된 값입니다");
@@ -1068,24 +1091,24 @@ public class X{
 			
 			if(op==12) {
 				if (playerTurn%2==1) {
-					if(yacount==0) {
+					if(yacount1==0) {
 						hSet11.put("야추", t.getyacht(one, two, three, four, five, six));
-						yacount++;
+						yacount1++;
 						break;
 					}
-					else if(yacount==1) {
+					else if(yacount1==1) {
 				
 					}
 					System.out.println("이미 저장된 값입니다");
 					continue;
 					}
 				else {
-					if(yacount==1) {
+					if(yacount2==0) {
 					hSet22.put("야추", t.getyacht(one, two, three, four, five, six));
-					yacount++;
+					yacount2++;
 					break;
 					}
-					else if(yacount==2) {
+					else if(yacount2==1) {
 				
 					}
 					System.out.println("이미 저장된 값입니다");

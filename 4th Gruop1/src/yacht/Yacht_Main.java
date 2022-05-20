@@ -1,155 +1,31 @@
 package yacht;
 
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Map;
-
-class MyData {
-	private int dice1;
-
-	synchronized void abc() {
-		System.out.println("\\            \\");
-		System.out.println(" \\       -- -- -- --");
-		System.out.println("  \\ ____ \\  \\  \\  \\  \\ ");
-		System.out.println("   \\ __ | /  / /  /  /");
-		System.out.println("    \\    /  / /  /  /");
-		System.out.println("     ----------------");
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-		}
-	}
-
-	synchronized void bcd() {
-		System.out.println();
-		System.out.println();
-		System.out.println("         ㅁ ㅁ ㅁ ㅁ ㅁ	");
-		System.out.println("         _  _  _ _     ");
-		System.out.println("        /  / / / /  ");
-		System.out.println("       /  / / / /  ");
-		System.out.println(" __   /  / / / /");
-		System.out.println("\\ \\/          /");
-		System.out.println(" \\           / ");
-		System.out.println("  \\ _______ /");
-		System.out.println();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-		}
-	}
-}
-
-class Turn {
-	private int one;
-	private int two;
-	private int three;
-	private int four;
-	private int five;
-	private int six;
-	private int bonus;
-	private int chance;
-	private int fourdice;
-	private int fullHouse;
-	private final int straight = 15;
-	private final int loyalstraight = 20;
-	private final int yacht = 60;
-	private int dice1;
-	private int dice2;
-	private int dice3;
-	private int dice4;
-	private int dice5;
-	private int dice6;
-	private final int zero = 0;
-
-	public Turn(int one, int two, int three, int four, int five, int six) {
-		this.one = one;
-		this.two = two;
-		this.three = three;
-		this.four = four;
-		this.five = five;
-		this.six = six;
-	}
-
-	public int getone(int one) {
-		return one * 1;
-	}
-
-	public int gettwo(int two) {
-		return two * 2;
-	}
-
-	public int getthree(int three) {
-		return three * 3;
-	}
-
-	public int getfour(int four) {
-		return four * 4;
-	}
-
-	public int getfive(int five) {
-		return five * 5;
-	}
-
-	public int getsix(int six) {
-		return six * 6;
-	}
-
-	public int getchance(int one, int two, int three, int four, int five, int six) {
-		return one * 1 + two * 2 + three * 3 + four * 4 + five * 5 + six * 6;
-	}
-
-	public int getfd(int one, int two, int three, int four, int five, int six) {
-		if (one == 4 || two == 4 || three == 4 || four == 4 || five == 4 || six == 4) {
-			return one * 1 + two * 2 + three * 3 + four * 4 + five * 5 + six * 6;
-		} else {
-			return zero;
-		}
-	}
-
-	public int getfh(int one, int two, int three, int four, int five, int six) {
-		if ((one == 3 || two == 3 || three == 3 || four == 3 || five == 3 || six == 3)
-				&& (one == 2 || two == 2 || three == 2 || four == 2 || five == 2 || six == 2))
-			return one * 1 + two * 2 + three * 3 + four * 4 + five * 5 + six * 6;
-		else {
-			return zero;
-		}
-	}
-
-	public int getst(int one, int two, int three, int four, int five, int six) {
-		if ((three >= 1 && four >= 1 && one >= 1 && two >= 1) | (two >= 1 && three >= 1 && four >= 1 && five >= 1)
-				| (three >= 1 && four >= 1 && five >= 1 && six >= 1))
-			return straight;
-		else
-			return zero;
-	}
-
-	public int getls(int one, int two, int three, int four, int five, int six) {
-		if ((one == 1 & two == 1 & three == 1 & four == 1 & five == 1)
-				|| (two == 1 & three == 1 & four == 1 & five == 1 & six == 1))
-			return loyalstraight;
-		else
-			return zero;
-	}
-
-	public int getyacht(int one, int two, int three, int four, int five, int six) {
-		if (one == 6 | two == 6 | three == 6 | four == 6 | five == 6 | six == 6) {
-			return yacht;
-		} else {
-			return zero;
-		}
-	}
-}
 
 public class Yacht_Main {
 	public class java {
 	}
 
-	public static void main(String[] args) {
-		File write = new File("C:/temp/ScoreOf.txt");
+	public static void main(String[] args) throws IOException {
+		File tempdir = new File("C:/Temp"); 
+		if(!tempdir.exists())
+			tempdir.mkdir();
+		File write = new File("C:/Temp/ScoreOf.txt");
+		if(!write.exists())
+			write.createNewFile(); // Score 파일 생성
 		BufferedReader br = new BufferedReader(new FileReader(write));
 		BufferedWriter bw = new BufferedWriter(new FileWriter(write,true));
 		
@@ -232,8 +108,8 @@ public class Yacht_Main {
 						break;
 					}
 
-					System.out.println("다시 굴릴 주사위를 선택하세요. 첫 번째 턴일 경우 또는 전체를 다시 굴릴 경우 6을 입력하세요. ");
-					System.out.println("주사위를 선택하였으면 0을 누르세요");
+					System.out.println(" 첫 번째 턴일 경우 또는 전체를 다시 굴릴 경우 6을 입력하세요. 그 외에는 다시 굴릴 주사위를 선택하세요.");
+					System.out.println(" 주사위(1~5)를 선택하였으면 0을 누르세요");
 
 					try {
 						for (int k = 0;; k++) {
@@ -307,16 +183,16 @@ public class Yacht_Main {
 						 * System.out.println("[dice3]: "+dice3); System.out.println("[dice4]: "+dice4);
 						 * System.out.println("[dice5]: "+dice5);
 						 */
-
-						MyData myData = new MyData();
+						Dice_Move move = new Dice_Move();
+						
 						new Thread() {
 							public void run() {
-								myData.abc();
+								move.abc();
 							};
 						}.start();
 						new Thread() {
 							public void run() {
-								myData.bcd();
+								move.bcd();
 							};
 						}.start();
 						new Thread() {
@@ -365,8 +241,9 @@ public class Yacht_Main {
 					System.out.println();
 					System.out.println(3 - count + "번의 기회가 더 남았습니다. 턴을 종료하시려면 d키를 입력하세요.");
 				}
-
-				Turn t = new Turn(h.get("one"), h.get("two"), h.get("three"), h.get("four"), h.get("five"),
+				
+				
+				Yacht_Score t = new Yacht_Score(h.get("one"), h.get("two"), h.get("three"), h.get("four"), h.get("five"),
 						h.get("six"));
 
 				System.out.println("옵션을 선택하세요.");

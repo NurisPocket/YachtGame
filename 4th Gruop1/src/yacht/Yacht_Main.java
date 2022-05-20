@@ -149,7 +149,10 @@ public class Yacht_Main {
 	}
 
 	public static void main(String[] args) {
-
+		File write = new File("C:/temp/ScoreOf.txt");
+		BufferedReader br = new BufferedReader(new FileReader(write));
+		BufferedWriter bw = new BufferedWriter(new FileWriter(write,true));
+		
 		System.out.println("게임을 시작합니다");
 		System.out.println("-----------");
 
@@ -376,9 +379,13 @@ public class Yacht_Main {
 					case 1:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("원")) {
 							hSet11.put("원", t.getone(one));
+							bw.write("-                       "+String.valueOf(t.getone(one)+"점"));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("원")) {
 							hSet22.put("원", t.getone(one));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("원")+"점\n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -387,9 +394,13 @@ public class Yacht_Main {
 					case 2:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("투")) {
 							hSet11.put("투", t.gettwo(two));
+							bw.write("-                       "+String.valueOf(hSet11.get("투")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("투")) {
 							hSet22.put("투", t.gettwo(two));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("투")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -398,9 +409,13 @@ public class Yacht_Main {
 					case 3:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("쓰리")) {
 							hSet11.put("쓰리", t.getthree(three));
+							bw.write("-                      "+String.valueOf(hSet11.get("쓰리")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("쓰리")) {
 							hSet22.put("쓰리", t.getthree(three));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("쓰리")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -409,9 +424,13 @@ public class Yacht_Main {
 					case 4:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("포")) {
 							hSet11.put("포", t.getfour(four));
+							bw.write("-                      "+String.valueOf(hSet11.get("포")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("포")) {
 							hSet22.put("포", t.getfour(four));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("포")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -420,9 +439,13 @@ public class Yacht_Main {
 					case 5:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("파이브")) {
 							hSet11.put("파이브", t.getfive(five));
+							bw.append("-                     "+String.valueOf(hSet11.get("파이브") + "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("파이브")) {
 							hSet22.put("파이브", t.getfive(five));
+							bw.append("                                                         	"+String.valueOf(hSet22.get("파이브") + "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -431,9 +454,13 @@ public class Yacht_Main {
 					case 6:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("식스")) {
 							hSet11.put("식스", t.getsix(six));
+							bw.write("-                      "+String.valueOf(hSet11.get("식스") + "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("식스")) {
 							hSet22.put("식스", t.getsix(six));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("식스") + "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -442,9 +469,13 @@ public class Yacht_Main {
 					case 7:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("찬스")) {
 							hSet11.put("찬스", t.getchance(one, two, three, four, five, six));
+							bw.write("-                      "+String.valueOf(hSet11.get("찬스")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("찬스")) {
 							hSet22.put("찬스", t.getchance(one, two, three, four, five, six));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("찬스")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -453,9 +484,13 @@ public class Yacht_Main {
 					case 8:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("포다이스")) {
 							hSet11.put("포다이스", t.getfd(one, two, three, four, five, six));
+							bw.write("-                      "+String.valueOf(hSet11.get("포다이스")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("포다이스")) {
 							hSet22.put("포다이스", t.getfd(one, two, three, four, five, six));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("포다이스")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -464,9 +499,13 @@ public class Yacht_Main {
 					case 9:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("풀하우스")) {
 							hSet11.put("풀하우스", t.getfh(one, two, three, four, five, six));
+							bw.write("-                      "+String.valueOf(hSet11.get("풀하우스")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("풀하우스")) {
 							hSet22.put("풀하우스", t.getfh(one, two, three, four, five, six));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("풀하우스")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -475,9 +514,13 @@ public class Yacht_Main {
 					case 10:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("스트레이트")) {
 							hSet11.put("스트레이트", t.getst(one, two, three, four, five, six));
+							bw.write("-                      "+String.valueOf(hSet11.get("스트레이트")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("스트레이트")) {
 							hSet22.put("스트레이트", t.getst(one, two, three, four, five, six));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("스트레이트")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -486,9 +529,13 @@ public class Yacht_Main {
 					case 11:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("로얄 스트레이트")) {
 							hSet11.put("로얄 스트레이트", t.getls(one, two, three, four, five, six));
+							bw.write("-                      "+String.valueOf(hSet11.get("로얄 스트레이트")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("로얄 스트레이트")) {
 							hSet22.put("로얄 스트레이트", t.getls(one, two, three, four, five, six));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("로얄 스트레이트")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -497,9 +544,13 @@ public class Yacht_Main {
 					case 12:
 						if (playerTurn % 2 == 1 && 0 == hSet11.get("야추")) {
 							hSet11.put("야추", t.getyacht(one, two, three, four, five, six));
+							bw.write("-                     "+String.valueOf(hSet11.get("야추")+ "점 "));
+							bw.flush();
 							break;
 						} else if (playerTurn % 2 == 0 && 0 == hSet22.get("야추")) {
 							hSet22.put("야추", t.getyacht(one, two, three, four, five, six));
+							bw.write("                                                         	"+String.valueOf(hSet22.get("야추")+ "점 \n"));
+							bw.flush();
 							break;
 						} else {
 							System.out.println("이미 점수를 추가하셨습니다." + System.lineSeparator() + "다시 선택해주세요.");
@@ -572,6 +623,23 @@ public class Yacht_Main {
 			playerTurn++;
 
 			if (playerTurn == 25) {
+				bw.append("플레이어 1" + String.valueOf(hSet11));
+				bw.append("             " + "Score :" +"    " +  hSet11.get("총합")+"\n");
+				bw.append("∇ \n"+"1.원 ="+hSet11.get("원")+"\n"+"2.투 ="+hSet11.get("투")+"\n"+"3.쓰리 ="+hSet11.get("쓰리")+"\n"+ "4.포 ="+hSet11.get("포")+"\n"+ "5.파이브 ="+hSet11.get("파이브")+"\n"+"6.식스 ="+hSet11.get("식스")+"\n"+"7.찬스 ="+hSet11.get("찬스")+"\n"+ "8.포다이스 ="+hSet11.get("포다이스")+"\n"+ "9.풀하우스 ="+hSet11.get("풀하우스")+"\n"+ "10.스트레이트 ="+hSet11.get("스트레이트")+"\n"+ "11.로얄스트레이트 ="+hSet11.get("로얄 스트레이트")+"\n"+ "12.야추 ="+hSet11.get("야추")+"\n"+"＾");
+				bw.append("\n\n");
+				bw.flush();
+				bw.append("플레이어 2" + String.valueOf(hSet22));
+				bw.append("             " + "Score :" +"    " +  hSet22.get("총합")+"\n");
+				bw.append("∇ \n"+"1.원 ="+hSet22.get("원")+"\n"+"2.투 ="+hSet22.get("투")+"\n"+"3.쓰리 ="+hSet22.get("쓰리")+"\n"+ "4.포 ="+hSet22.get("포")+"\n"+ "5.파이브 ="+hSet22.get("파이브")+"\n"+"6.식스 ="+hSet22.get("식스")+"\n"+"7.찬스 ="+hSet22.get("찬스")+"\n"+ "8.포다이스 ="+hSet22.get("포다이스")+"\n"+ "9.풀하우스 ="+hSet22.get("풀하우스")+"\n"+ "10.스트레이트 ="+hSet22.get("스트레이트")+"\n"+ "11.로얄스트레이트 ="+hSet22.get("로얄 스트레이트")+"\n"+ "12.야추 ="+hSet22.get("야추")+"\n"+"＾");
+				bw.append("\n\n");
+				bw.flush();
+				
+				String data;
+				
+				while((data= br.readLine()) != null) {
+				
+					System.out.println(String.valueOf(data));
+				}
 
 				if (hSet11.get("총합") > hSet22.get("총합")) {
 					System.out.println("플레이어1가 이겼습니다");
@@ -582,6 +650,8 @@ public class Yacht_Main {
 				}
 
 				System.out.println("게임 종료");
+				br.close();
+				new FileOutputStream("C:/temp/"+ "ScoreOf.txt").close();
 				break;
 			}
 			System.out.println("다음 상대 차례입니다. 주사위를 던지세요 ");

@@ -1,34 +1,7 @@
 package yacht;
 
-public class Yacht_Score{  //class Turn
-	private int one;
-	private int two;
-	private int three;
-	private int four;
-	private int five;
-	private int six;
-	private int bonus;
-	private int chance;
-	private int fourdice;
-	private int fullHouse;
-	private final int straight = 15;
-	private final int loyalstraight = 20;
-	private final int yacht = 60;
-	private int dice1;
-	private int dice2;
-	private int dice3;
-	private int dice4;
-	private int dice5;
-	private int dice6;
-	private final int zero = 0;
-
-	public Yacht_Score(int one, int two, int three, int four, int five, int six) {  
-		this.one = one;
-		this.two = two;
-		this.three = three;
-		this.four = four;
-		this.five = five;
-		this.six = six;
+public class Yacht_Score extends Yacht_Dice {
+	public void Turn(int one, int two, int three, int four, int five, int six) {
 	}
 
 	public int getone(int one) {

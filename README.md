@@ -21,9 +21,5 @@ Vanilla JavaScript와 영화 API를 이용하여 구현한 영화 검색 웹 앱
 <br/>
 
 ## 🛠 Tools
-
-![HTML5](https://img.shields.io/badge/HTML5-DE4B24?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-026DB4?style=flat-square&logo=css3)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1D?style=flat-square&logo=javascript&logoColor=white)
-
+![JAVA](https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white)
 <br/>

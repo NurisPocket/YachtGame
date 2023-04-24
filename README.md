@@ -10,6 +10,11 @@
 
 <br/>
 
+##:pencil2: What i take on
+
+
+<br/>
+
 ## 🛠 Tools
 ![JAVA](https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white)
 <br/>
